@@ -1,0 +1,5 @@
+<div class="text-white space-y-0.5 relative">
+  <ng-container *ngFor="let item of items | filterSidebarMenuItem : searchText">
+    <app-sidebar-menu-item [shrinkMode]="shrinkMode" [searchText]="searchText" [level]="level" [item]="item" />
+  </ng-container>
+</div>

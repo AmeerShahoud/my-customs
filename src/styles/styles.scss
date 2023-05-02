@@ -1,0 +1,62 @@
+@import "material";
+/* You can add global styles to this file, and also import other style files */
+@import "material-icons";
+@import "arabic_font";
+@import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: "Tajawal", sans-serif;
+}
+
+.mat-icon {
+  &.size-18 {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  &.size-36 {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  &.size-48 {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+.dialog-footer {
+  @apply border border-t p-4 space-x-4 rtl:space-x-reverse flex;
+}
+
+.dialog-header {
+  @apply p-4 bg-primary text-white flex justify-between items-center;
+  h1 {
+    @apply text-xl;
+  }
+}
+
+.dialog-content {
+  @apply p-4;
+}
+
+.dialog-container {
+  @apply max-w-full min-w-[600px];
+}
+
+.close-btn {
+  @apply absolute rtl:left-0 ltr:right-0;
+}
+.table-style {
+  @apply [&_td]:text-slate-700 [&_th]:text-slate-700;
+}

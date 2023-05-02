@@ -1,0 +1,29 @@
+:host-context(html[dir="ltr"]) {
+  a.menu-item-link:not(.level-1) {
+    padding-left: calc((var(--level) - 1) * 35px);
+  }
+
+  .opened > a > div > .children-indicator,
+  .filter > a > div > .children-indicator {
+    transform: rotate(90deg);
+  }
+
+  .closed > a > div > .children-indicator {
+    transform: rotate(0deg);
+  }
+}
+
+:host-context(html[dir="rtl"]) {
+  a.menu-item-link:not(.level-1) {
+    padding-right: calc((var(--level) - 1) * 35px);
+  }
+
+  .opened > a > div > .children-indicator,
+  .filter > a > div > .children-indicator {
+    transform: rotate(90deg);
+  }
+
+  .closed > a > div > .children-indicator {
+    transform: rotate(180deg);
+  }
+}
